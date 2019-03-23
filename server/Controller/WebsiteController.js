@@ -1,13 +1,13 @@
 // import mongoose model
-const Website = require("../models/Website");
+import Website from "../models/Website";
 // import express for creating our routes
-const express = require("express");
-// import request for crawling/scraping websites
-const request = require("request");
+import express from "express";
 // import cheerio for serverside jquery for our scraping clean up
-const cheerio = require("cheerio");
+import cheerio from "cheerio";
+// import request for crawling/scraping websites
+import request from "request";
 // helper functions for our scraping
-let { getAnchors, getHtmlText, getTitle } = require("../common/helper");
+import { getAnchors, getHtmlText, getTitle } from "../common/helper";
 // create router const for creating our routes
 const router = express.Router();
 
@@ -108,4 +108,4 @@ router.get("/all", (req, res) => {
   });
 });
 
-module.exports = router;
+export default router;
