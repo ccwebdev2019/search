@@ -18,7 +18,7 @@ connect(
 
 // middleware
 //app.use(cors());
-app.use(express.static(__dirname, "/public"));
+app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -37,7 +37,7 @@ app.use(function(req, res, error) {
 
 // server static html for our routes
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "/public/index.html"));
+  res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 // start server
