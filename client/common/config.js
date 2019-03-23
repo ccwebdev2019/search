@@ -1,4 +1,4 @@
 // properties, methods that can be used across frontend
 export default {
-  devUrl: "https://searchthweb.herokuapp.com/api/v1"
+  devUrl: "http://localhost:7000/api/v1"
 };
