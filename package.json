@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "webpack -p"
+    "start": "webpack-dev-server & nodemon server.js",
+    "build": "webpack -w"
   },
   "keywords": [],
   "author": "",
