@@ -12,7 +12,7 @@ const app = express();
 
 // connect to mongoDB
 connect(
-  "mongodb://localhost:27017/crawl",
+  process.env.MONGODB_URI,
   { useNewUrlParser: true }
 );
 
@@ -36,7 +36,7 @@ app.use(function(req, res, error) {
 });
 
 // server static html for our routes
-app.get("/*", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
